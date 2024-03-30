@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Press Start 2p';
+    src: url('GROBOLD.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("https://www.ssbwiki.com/images/7/73/SSBU-Pokémon_Stadium_2.png") no-repeat center center fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    text-align: center;
+    font-family: 'Press Start 2p', sans-serif;
+}
+
+.result {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    z-index: 2;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 22vw 20vw 22vw;
+    text-align: center;
+    padding-top: 12vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Types of Pokemon */
+.namePokemon, .namePokemonEnemy {
+    font-family: "Press Start 2p";
+    font-size: 40px;
+    text-shadow: 0px 0px 8px yellow;
+}
+
+.typePokemon, .typePokemonEnemy {
+    font-family: "Press Start 2p";
+    font-size: 30px;
+    text-shadow: 0px 0px 8px yellow;
+}
+
+/* Main Pokemon */
+.mainPokemon, .enemyPokemon {
+    width: 22vw;
+    height: auto;
+    background-size: auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mainPokemon img, .enemyPokemon img {
+    width: 22vw;
+}
+
+progress {
+    height: 20px;
+    width: 10vw;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+progress::-webkit-progress-bar {
+    background-color: white;
+}
+
+progress::-webkit-progress-value {
+    background-color: rgb(4, 201, 4);
+}
+
+.hpPointEnemy, .hpPoint {
+    font-family: "Press Start 2p";
+    font-size: 20px;
+    color: white;
+}
+
+.box1, .box3 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.box2 {
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons img {
+    width: 10vw;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    margin-top: 15px;
+    font-size: 1.5vw;
+    border: 3px solid black;
+    padding: 0.2vw;
+    color: black;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    color: black;
+}
+
+.skillCheck, .skillCheckVisible {
+    margin-top: 35px;
+    height: 25px;
+}
+
+.skillCheckVisible {
+    margin-right: auto;
+    margin-left: auto;
+    width: 15vw;
+    background-image: linear-gradient(to right, #ff0000 20%, #ff9900 20%, #ff9900 40%, #f1ff2c 40%, #f1ff2c 48%, #00ff0d 48%, #00ff0d 52%, #f1ff2c 52%, #f1ff2c 42%, #f1ff2c 60%, #ff9900 60%, #ff9900 80%, #ff0000 80%);
+    border: 2px solid black;
+}
+
+.visibleMarker {
+    height: 30px;
+    width: 5px;
+    background: linear-gradient(#4165e0, #afc1ff, #4165e0);
+    z-index: 9;
+    position: absolute;
+    animation: linear infinite alternate;
+    animation-name: run;
+    animation-duration: 0.7s;
+}
+
+@keyframes run {
+    0% {
+        left: 13%;
+    }
+    100% {
+        left: 86%;
+    }
+}
+
+.video-game-button {
+    text-shadow: 1px 1px pink, -1px -1px maroon;
+    line-height: 1.5em;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    border-radius: .75em;
+    background-color: red;
+    box-shadow: 0 .2em maroon;
+    color: red;
+    margin: 5px;
+    background-color: red;
+    background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: -moz-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: -webkit-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.start-btn {
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
+    cursor: pointer;
+}
+
+.video-game-button:active, .start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
+/* Attack block and special attack buttons */
+.attackBtn.video-game-button,
+.blockBtn.video-game-button,
+.specialAttackBtn.video-game-button {
+    font-family: 'Press Start 2p', sans-serif;
+    text-shadow: 1px 1px pink, -1px -1px maroon;
+    line-height: 1.5em;
+    text-align: center;
+    display: inline-block;
+    border-radius: .75em;
+    background-color: red;
+    box-shadow: 0 .2em maroon;
+    color: red;
+    margin: 5px;
+    background-color: red;
+    background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: -moz-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: -webkit-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.attackBtn.video-game-button:active,
+.blockBtn.video-game-button:active,
+.specialAttackBtn.video-game-button:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}

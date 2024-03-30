@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle</title>
+    <script src="https://kit.fontawesome.com/fe4ecc5880.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="result"></div>
+    <div class="container">
+        <div class="box1">
+            <p class="namePokemon"></p>
+            <p class="typePokemon"></p>
+            <div class="mainPokemon">
+                <img class="imgMain" src="img/p2b.gif">
+            </div>
+            <progress id="hpBar" value="100" max="100"></progress>
+            <p class="hpPoint"></p>
+        </div>
+        <div class="box2">
+            <div class="buttons">
+                <img src="img/vs.png"></br>
+                <div class="game-controls">
+                    <button class="attackBtn video-game-button">ATTACK</button>
+                    <button class="blockBtn video-game-button">BLOCK</button>
+                    <button class="specialAttackBtn video-game-button">SPECIAL ATTACK</button>
+                </div>
+                <div class="skillCheck"><div class="marker"></div></div>
+            </div>
+        </div>
+        <div class="box3">
+            <p class="namePokemonEnemy"></p>
+            <p class="typePokemonEnemy"></p>
+            <div class="enemyPokemon"><img class="imgEnemy" src="img/b2b.gif"></div>
+            <progress id="hpBarEnemy" value="50" max="100"></progress>
+            <p class="hpPointEnemy"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

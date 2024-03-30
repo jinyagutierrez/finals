@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('mainbg.gif');
+    /* Replace 'bg.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add position relative */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5); /* Adjust opacity and color */
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    padding: 20px; /* Add padding */
+    border-radius: 20px; /* Add rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add glow effect */
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Use the ComicNeue font */
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: px blue; /* Add blue border */
+    text-shadow: 
+        0 0 0 yellow, /* Change white to yellow */
+        -2px -2px 0 blue,  
+        2px -2px 0 blue,  
+        -2px 2px 0 blue,  
+        2px 2px 0 blue;
+    letter-spacing: 0.1em; /* Adjust letter spacing to make the text wider */
+}
+.battlefield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Added gap between Pokemon images */
+    margin-bottom: 50px; /* Adjusted margin */
+}
+
+.pokemon-image {
+    width: 180px; /* Enlarge the width of the Pokémon images */
+    height: 180px; /* Enlarge the height of the Pokémon images */
+    border-radius: 50%; /* Make images circular */
+    border: 6px solid #fff; /* Add thick border */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add glow effect */
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.pokemon-image:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+.title-image {
+    border-radius: 30px; /* Add curved edges to the title image */
+    width: 450px; /* Enlarge the width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Add glow effect */
+}
+
+.start-btn {
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    padding: 20px 40px; /* Increase padding */
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
+    cursor: pointer;
+    font-size: 24px; /* Enlarge the font size */
+}
+
+.start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
